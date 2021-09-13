@@ -56,7 +56,7 @@ class TestExercice(unittest.TestCase):
             ("aaaa", "x")
         ]
 
-        output = [exercice.get_nb_char(v[0], v[1]) for v in values]
+        output = [exercice.get_nb_char(v) for v in values]
         answer = [v[0].count(v[1]) for v in values]
 
         self.assertListEqual(
