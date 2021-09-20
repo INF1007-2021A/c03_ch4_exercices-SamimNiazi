@@ -56,7 +56,7 @@ class TestExercice(unittest.TestCase):
             ("aaaa", "x")
         ]
 
-        output = [exercice.get_nb_char(v) for v in values]
+        output = [exercice.get_nb_char(v[0], v[1]) for v in values]
         answer = [v[0].count(v[1]) for v in values]
 
         self.assertListEqual(
@@ -72,7 +72,7 @@ class TestExercice(unittest.TestCase):
             ("The 2006 Subway 500 was the 32nd stock car race of the 2006 NASCAR Nextel Cup Series and the sixth in the ten-race Chase for the Nextel Cup.")
         ]
 
-        output = [exercice.get_nb_words(v[0], v[1]) for v in values]
+        output = [exercice.get_nb_words(v) for v in values]
         answer = [len(v.split()) for v in values]
 
         self.assertListEqual(
